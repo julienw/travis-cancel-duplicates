@@ -4,12 +4,14 @@
 require 'travis'
 
 repo = Travis::Repository.find('mozilla-b2g/gaia')
+
 repo.builds(:event_type => 'pull_request')
-  .take_while { |b| b.pending? }
+  .take_while { |b| !b.passed? }
   .group_by { |b| b.pull_request_number }
   .each {
     |_, b|
     b.drop(1)
-      .each { |b| b.cancel }
+     .select { |b| b.pending? }
+     .each { |b| p "Canceling #{b.number}"; b.cancel }
   }
 
