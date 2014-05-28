@@ -1,5 +1,11 @@
 Quick start
 -----
+### Install Ruby
+#### In Debian
+```bash
+aptitude install ruby ruby-dev
+```
+
 ### Install the [travis gem](https://github.com/travis-ci/travis.rb)
 
 ```bash
