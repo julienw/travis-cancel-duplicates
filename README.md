@@ -3,7 +3,7 @@ Quick start
 ### Install the [travis gem](https://github.com/travis-ci/travis.rb)
 
 ```bash
-gem install -v 1.6.11 --no-rdoc --no-ri --user-install
+gem install travis -v 1.6.11 --no-rdoc --no-ri --user-install
 ```
 
 ### Login into travis
