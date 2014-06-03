@@ -18,13 +18,6 @@ gem install travis -v 1.6.11 --no-rdoc --no-ri --user-install
 travis login --auto
 ```
 
-
-### Get your travis token
-
-```bash
-travis token
-```
-
 ### Run the script
 ```bash
 ./travis-cancel-duplicates.rb
